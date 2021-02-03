@@ -3,15 +3,24 @@ const player = document.getElementById('video'),
   toggle = document.getElementById('toggle'),
   progressLine = document.getElementById('progress-line'),
   ranges = document.querySelectorAll('.slider'),
-  dataSkip = document.querySelectorAll('[data-skip]')
+  dataSkip = document.querySelectorAll('[data-skip]'),
+  STATE = {
+      play: 'play',
+      pause: 'pause'
+  },
+  TOGGLE_ICON = {
+      play: '►',
+      pause: '❚ ❚'
+  }
+
 
 const changeStatePlayer = () => {
-  const state = player.paused ? 'play' : 'pause'
+  const state = player.paused ? STATE.play : STATE.pause
   player[state]()
 }
 
 function updateToggle() {
-  const updateIcon = this.paused ? '►' : '❚ ❚'
+  const updateIcon = this.paused ? TOGGLE_ICON.play : TOGGLE_ICON.pause
   toggle.innerText = updateIcon
 }
 
