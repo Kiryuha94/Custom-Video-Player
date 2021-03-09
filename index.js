@@ -4,6 +4,7 @@ const player = document.getElementById('video'),
   progressLine = document.getElementById('progress-line'),
   ranges = document.querySelectorAll('.slider'),
   dataSkip = document.querySelectorAll('[data-skip]');
+
 const STATE = {
   play: 'play',
   pause: 'pause',
@@ -32,8 +33,9 @@ function rewindTime() {
   player.currentTime += parseFloat(this.dataset.skip);
 }
 
+const PRECENT_VALUE = 100
 const changeProgress = () => {
-  const currProgress = (player.currentTime / player.duration) * 100;
+  const currProgress = (player.currentTime / player.duration) * PRECENT_VALUE;
   progressLine.style.flexBasis = `${currProgress}%`;
 };
 

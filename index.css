@@ -30,7 +30,7 @@ body {
   background: rgb(66, 48, 65);
   padding: 5px;
   line-height: 1;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   outline: none;
   width: 5rem;
@@ -64,10 +64,10 @@ body {
   transition: height 0.3s;
   cursor: ew-resize;
   margin-bottom: 0.2rem;
-  background: gainsboro;
+  background: rgb(220, 220, 220);
 }
 
-.progress-line {
+.progress__line {
   width: 50%;
   background: rgb(245, 127, 127);
   flex: 0;
@@ -80,7 +80,7 @@ body {
     outline: none;
     width: 200px;
     -webkit-appearance: none;
-    background-color: #4d8b86;
+    background-color: rgb(77, 139, 134);
     margin: 0 5px;
     border-radius: 50px;
   }
