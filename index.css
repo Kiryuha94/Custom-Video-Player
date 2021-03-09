@@ -67,6 +67,11 @@ body {
   background: rgb(220, 220, 220);
 }
 
+.control-panel {
+  display: flex;
+  align-items: center;
+}
+
 .progress__line {
   width: 50%;
   background: rgb(245, 127, 127);
